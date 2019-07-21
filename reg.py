@@ -41,11 +41,12 @@ print("*"*50)
 tf.set_random_seed(0)
 #tf 데이터 입력부 지정(placeholder)
 x_h=tf.placeholder(dtype=tf.float32)
+y_h=tf.placeholder(dtype=tf.float32)
 #tf 학습 변수 지정
 w_ini=tf.random_uniform([1],-10,10)
 w_=tf.Variable(w_ini,dtype=tf.float32)
 b_=tf.Variable(tf.zeros([1]),dtype=tf.float32)
-# 모델 지정 
+# 모델 지정 https://cloud.naver.com/urlShareIndex.nhn?ownerid=iodeep&owneridx=29326555&setidc=2&shareno=3637744&key=ZQctJ-waCoRucdQADDbmMbSI_oGoUF7Z-XEH7WStoRcE#
 y=w_*x_h+b_
 
 # 최적화 방향 변수: loss error cost
@@ -68,7 +69,8 @@ for i in range(100):
     #print("y 결과는:",res)
     w_h=sess.run(w_)
     b_h=sess.run(b_)
-    print("step:",i,",w_ :",w_h,"b_:",b_h)
+    loss_h = sess.run(train_step,feed_dict={x_h:x_data,y_h:y_data})
+    print("step:",i,",w_ :",w_h,"b_:",b_h,"loss_h:",loss_h)
     #print("b_ :",b_h)
     y_min=w_h*x_min+b_h
     y_max=w_h*x_max+b_h

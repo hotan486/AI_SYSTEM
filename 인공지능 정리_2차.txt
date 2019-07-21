@@ -66,11 +66,15 @@ GD -> 데이터를 점진 적으로 샘플하여 데이터를 구하는 기법
 6교시
 http://naver.me/FKscPueG
 ai1qaz
+
 -------------------------------------------------------
 7교시
-
+    #loss_h = sess.run(train_step,feed_dict={x_h:x_data,y_h:y_data})
+    #print("step:",i,",w_ :",w_h,"b_:",b_h,"loss_h:",loss_h)
 -------------------------------------------------------
 8교시
-
+	https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/tutorials/	
+	yolo 007 영상
+	자연어 처리 nlp -> 나라 최고가능 	
 -------------------------------------------------------
 ===================================
